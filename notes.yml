@@ -1,0 +1,5 @@
+# Build image
+$ docker build -t webbase .
+
+# Run 
+$ docker run --name=personal-site -p 8081:80 -d --mount type=bind,source=/Users/smarman/Documents/repos/test-site-uwsgi/app,target=/app webbase

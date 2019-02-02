@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  text-align: center;
+}
+ul li {
+  display: inline;
+}
+div {
+  background-color: red;
+}
+body {
+  background-color: yellow;
+  width: 100%;
+}
+footer {
+  background-color: black;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  margin-top: 5%;
+}
+footer nav ul {
+    margin: 0 auto;
+    width: 40%;
+}
+
+footer li {
+    width: 19%;
+    margin-right: 4%;
+}
