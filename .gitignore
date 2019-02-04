@@ -2,3 +2,5 @@ __pycache__
 *.swp
 *.log
 *.pid
+.env
+venv/

@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
-<div class="about">
-  <h2>{{ program }}</h2>
-  <p>{{ program }}</p>
+<div class="partner">
+  <h1>{{ payload.data.partner_name }}</h1>
+  <p>{{ payload.group }}</p>
+  <h3>Partner Info</h3>
+  {% for key, value in payload.data.items() %}
+    <p>{{ key }}: {{ value }}</p>
+  {% endfor %}
+  <h3>Servers</h3>
+  {% for host in payload.hosts %}
+    <p><a href="/host/{{ host }}">{{ host }}</a></p>
+  {% endfor %}
 </div>
 {% endblock %}

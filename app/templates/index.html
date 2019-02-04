@@ -1,10 +1,17 @@
 {% extends "layout.html"%}
 {% block body %}
 <div class="block1">
-  <h1>This is the index File!</h1>
-  <form action="/signup" method="post">
+  <h1>This is the Main Page!</h1>
+  <form action="/lookup" method="post">
     <input type="text" name="partner"></input>
     <input type="submit" value="LookUp"></input>
   </form>
+  <div class="customers">
+    {% for partner in payload %}
+    <p>
+      <a href="partner/{{ partner.data.partner }}-{{ partner.data.env }}">{{ partner.data.partner_name }} {{ partner.data.env }}</a>
+    </p>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}

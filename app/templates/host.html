@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="host">
+  <h2>{{ payload.host }}</h2>
+  {% for key, value in payload.data.items() %}
+    <p>{{ key }}: {{ value }}</p>
+  {% endfor %}
+</div>
+{% endblock %}
