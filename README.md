@@ -20,6 +20,7 @@ $ make restart
 
 # For changes in the server. ie) new pip packages:
 $ make rebuild
+```
 
 ### Put your toys away:
 ```bash
