@@ -5,10 +5,13 @@ mkfile_dir := $(dir $(mkfile_path))
 restart:
 	docker restart guestBook
 
-dev-env: build rebuild
+dev-env: build run
 
 build:
 	docker build -t webbase .
+
+run:
+	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app webbase
 
 rebuild:
 	docker rm -f guestBook
