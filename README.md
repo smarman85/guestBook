@@ -11,6 +11,8 @@ $ echo "export URL='https://source-of-truth.endpoint.com/v1/api/'" >> app/.env
 ### Get Going:
 ```bash
 $ make dev-env
+
+# App will be available on 0.0.0.0:8082
 ```
 
 ### Bounce app for development
