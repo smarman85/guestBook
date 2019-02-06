@@ -8,9 +8,15 @@
   </form>
   <div class="customers">
     {% for partner in payload %}
-    <p>
-      <a href="partner/{{ partner.data.partner }}-{{ partner.data.env }}">{{ partner.data.partner_name }} {{ partner.data.env }}</a>
-    </p>
+      {% if partner.data.partner_name is not defined %}
+        <p>
+          <a href="partner/{{ partner.group }}">{{ partner.group }}</a>
+        </p>
+      {% else %}
+        <p>
+          <a href="partner/{{ partner.group }}">{{ partner.data.partner_name }} {{ partner.data.env }}</a>
+        </p>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
