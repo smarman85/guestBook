@@ -2,6 +2,9 @@
 
 ## Set up 
 
+### Get yourself some Docekr (MAC):
+https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-desktop-for-mac
+
 ### Make a .env:
 ```bash
 $ echo "export URL='https://source-of-truth.endpoint.com/v1/api/'" >> app/.env

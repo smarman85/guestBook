@@ -12,6 +12,8 @@ build:
 
 run:
 	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app webbase
+	sleep 5
+	open http://0.0.0.0:8082
 
 rebuild:
 	docker rm -f guestBook
@@ -19,3 +21,4 @@ rebuild:
 
 clean:
 	docker rm -f guestBook
+	docker rmi webbase
