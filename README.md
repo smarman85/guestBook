@@ -7,7 +7,7 @@ https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-desktop-f
 
 ### Make a .env:
 ```bash
-$ echo "export URL='https://source-of-truth.endpoint.com/v1/api/'" >> app/.env
+$ echo "export URL='https://source-of-truth.endpoint.com/v1/api/'" >> .env
 # note!! you need the trailing slash
 ```
 

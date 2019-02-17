@@ -2,6 +2,9 @@
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))
 
+include .env
+export $(shell sed 's/=.*//' .env)
+
 restart:
 	docker restart guestBook
 
@@ -11,7 +14,7 @@ build:
 	docker build -t webbase .
 
 run:
-	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app webbase
+	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app -e URL=${URL} webbase
 	sleep 5
 	open http://0.0.0.0:8082
 
