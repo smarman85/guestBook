@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: guestbook-svc
+  labels:
+    app: guestbook-svc
+spec:
+  type: NodePort
+  ports:
+  - port: 5001
+    targetPort: 5000
+    nodePort: 30087
+  selector:
+    app: guestbook-svc

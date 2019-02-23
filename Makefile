@@ -14,13 +14,13 @@ build:
 	docker build -t webbase .
 
 run:
-	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app -e URL=${URL} webbase
+	docker run --name=guestBook -p 5000:5000 -d --mount type=bind,source=${mkfile_dir}app,target=/app -e URL=${URL} webbase
 	sleep 5
-	open http://0.0.0.0:8082
+	open http://0.0.0.0:5000
 
 rebuild:
 	docker rm -f guestBook
-	docker run --name=guestBook -p 8082:80 -d --mount type=bind,source=${mkfile_dir}app,target=/app webbase
+	docker run --name=guestBook -p 5000:5000 -d --mount type=bind,source=${mkfile_dir}app,target=/app webbase
 
 clean:
 	docker rm -f guestBook
