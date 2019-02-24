@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: guestbook-svc
   labels:
-    app: guestbook-svc
+    app: guestbook
 spec:
   type: NodePort
   ports:
-  - port: 5001
-    targetPort: 5000
+  - port: 5000
+    #targetPort: 5000
     nodePort: 30087
   selector:
-    app: guestbook-svc
+    app: guestbook
