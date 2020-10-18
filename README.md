@@ -2,7 +2,7 @@
 
 ## Set up 
 
-### Get yourself some Docekr (MAC):
+### Get yourself some Docker (MAC):
 https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-desktop-for-mac
 
 ### Make a .env:
